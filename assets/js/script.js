@@ -39,3 +39,9 @@ function resetColor(){
     changeTextOfUserColor( refUserColor, 'black');
     
 }
+
+function changeName(){
+    const userName = prompt("Escribe tu nombre cholo", "Machete");
+    const refGretting = document.getElementById("gretting");
+    refGretting.innerHTML = `Hola ${userName}, la clika te respalda`;
+}
