@@ -11,3 +11,23 @@ function changeColor( elementHtml, color) {
 
     elementHtml.style.color = color;
 }
+
+function changeColorWithPrompt( elementHtml) {
+    const color = prompt("Dime el color en inglés", "yellow");
+    elementHtml.innerHTML = "<h3>Ahora soy <em>" + color + "</em> </h3>";
+    changeColor( elementHtml, color );
+}
+
+function resetColor(){
+    const refRedColor = document.getElementById("red-color");
+    const refGreenColor = document.getElementById("green-color");
+    const refPurpleColor = document.getElementById("purple-color");
+    const refMyColor = document.getElementById("my-color");
+
+    /* refRedColor.style.color = "black" */
+    changeColor(refRedColor, 'black');
+    changeColor(refGreenColor, 'black');
+    changeColor(refPurpleColor, 'black');
+    changeColor(refMyColor, 'black');
+    
+}
