@@ -69,3 +69,39 @@ const myObj = {
 
 }
 console.log( myObj );
+
+//------------------------------- Objetos en JavaScript
+// Tipo de dato Array
+const cancionesCh30 = ["Highway Star", "Trouble", "Saoko", "Rock DJ"];
+
+// tipos de datos Object
+const misDatosDePerfil = {
+    name : "Mauricio",
+    lastName : "Peniche",
+    age: 26,
+    isBelicoso: true,
+    fullName : function(){
+        return `Nombre completo de Mau: ${this.name} ${this.lastName}`;
+        /* return "Nombre completo de Mau: " + this.name + " " + this.lastName; */
+    },
+    // Agregar una funcion que muestre el nombre completo en mayusculas
+     fullNametoUpperCase : function(){
+        return `Nombre completo de Mau: ${this.name.toUpperCase()} ${this.lastName.toUpperCase()}`;
+     }
+     }
+
+/* const nombreMayus = {
+    nombre : "MAURICIO",
+    apellido: "PENICHE",
+    nombrecompleto : function() {
+        return `NOMBRE COMPLETO: ${this.nombre} ${this.apellido}`;
+    }
+   } */
+
+
+console.log( misDatosDePerfil);
+console.table( misDatosDePerfil);
+console.log( misDatosDePerfil.fullName ); // f() return 'Nombre de la funcion'
+console.log( misDatosDePerfil.fullName() ); // Mauricio Peniche
+console.log(misDatosDePerfil.fullNametoUpperCase() );
+
