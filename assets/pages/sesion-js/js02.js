@@ -145,3 +145,9 @@ console.log(`Sumatoria de multiples numeros: ${ sumatoriaMultiplesNumeros(2, 5)}
 console.log(`Sumatoria de multiples numeros: ${ sumatoriaMultiplesNumeros(2, 5, 10, 9)}`); // 26
 console.log(`Sumatoria de multiples numeros: ${ sumatoriaMultiplesNumeros(2, 5, 10, 9, 20, 10)}`); // 56
 console.log(`Sumatoria de multiples numeros: ${ sumatoriaMultiplesNumeros(2)}`); // 2
+
+/*
+-----------------------Funciones de Callback------------------------
+
+
+*/
