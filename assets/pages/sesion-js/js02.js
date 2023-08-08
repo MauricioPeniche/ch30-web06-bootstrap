@@ -267,3 +267,75 @@ const counterCharacterUnsensitive = ( phase, character ) => phase.toLowerCase().
 
 console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") } `); // 9
 console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") + counterCharacter(phasePP, "P") } `);
+
+
+//------------------ Recursividad------------------------------------
+/*
+  Una función recursiva es una función que se llama a sí misma durante su ejecución. 
+
+  Se utilizan en algoritmos y soluciones que se basan en la división y conquista como cálculos matemáticos, recorrido de estructura de datos y algoritmos de búsqueda y ordenamiento. 
+
+  Patrón: 
+    function nombreFuncionRecursiva( parámetro ){
+        if( condicionParo){
+            return expresion;
+        }
+        else {
+            // llamada recursiva 
+            nombreFuncionRecursiva( nuevoParametro );
+        }
+    }
+*/
+
+//------ Calculo del factorial de un numero usando ciclo for---------
+function factorialConCicloFor( numero ) {
+   let factorial = 1;
+  
+  for (let i = numero; i > 0; i--) {// i = i - 1
+  console.log(`factorial: ${factorial} * ${i} = ${factorial*i}`)
+   factorial = factorial * i;
+   }
+   return factorial;
+  }
+  
+  console.log(`El factorial de 5 es: ${factorialConCicloFor(5)}`) // 1*2*3*4*5 = 120
+
+//---------- Calculo del factorial usando recursividad---------------
+
+function factorialConRecursividad( numero ){
+  if ( numero === 1 ) {
+    return 1;
+  } else {
+      console.log(`${numero} * ${numero-1}`);
+      return numero * factorialConRecursividad( numero -1 );
+  }
+}
+
+  console.log(`El factorial recursivo de 4 es: ${factorialConRecursividad(4)}`);
+
+// ---------------- Saludar con recursividad ------------------------
+/* 
+  Generar una funcion recursiva que muestre en consola un saludo donde se indique el numero de saludo deseado
+
+  ej: saludar 10 veces 
+
+  Saludo 1 
+  Saludo 2
+  Saludo 3
+    ....
+  Saludo 9
+   Saludo 10
+
+*/
+
+function saludos(numeroSaludo) {
+  if (numeroSaludo === 1) {
+    console.log("Saludo 1");
+    return;
+  }
+
+  console.log("Saludo " + numeroSaludo);
+  saludos(numeroSaludo - 1);
+}
+
+saludos(10);
