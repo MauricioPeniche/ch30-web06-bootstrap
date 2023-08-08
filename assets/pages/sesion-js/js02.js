@@ -231,3 +231,39 @@ function getCoursesWithFilter( array1Courses){
     return commonCourses;
 }
 console.log(`Comúnxpartes: ${getCoursesWithFilter( student1Courses, student2Courses )}`);
+
+// ---------- Contar la cantidad de caracteres de una frase ----------
+/* 
+     "peso pluma pica papas con un pico y una pala con un pico pica papas peso pluma";
+
+   Mostrar la cantidad de letras 'p'.
+   Usar funciones flecha.
+
+    recomendaciones de métodos: split, filter
+*/
+
+/* const frase = "peso pluma pica papas con un pico y una pala con un pico pica papas peso pluma";
+
+const contarLetrasP = (frase) => {
+  const letrasP = frase.split('').filter(letra => letra === 'p' || letra === 'P');
+  return letrasP.length;
+};
+
+const cantidadP = contarLetrasP(frase);
+console.log(`La cantidad de letras 'p' en la frase es: ${cantidadP}`);
+
+ */
+
+const frase = ("peso pluma pica papas con un pico y una pala con un pico pica papas peso pluma");
+
+console.log(`La cantidad de letras 'p' en la frase es: ${frase.split("p").length -1}`);
+
+//-----------------------------------------------------------------
+
+const phasePP = "Peso Pluma pica papas con un pico y una pala con un pico pica papas Peso Pluma";
+const counterCharacter = ( phase, character ) => phase.split(character).length-1;
+
+const counterCharacterUnsensitive = ( phase, character ) => phase.toLowerCase().split(character).length-1;
+
+console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") } `); // 9
+console.log(`Cantidad de letras 'p' : ${ counterCharacter(phasePP, "p") + counterCharacter(phasePP, "P") } `);
