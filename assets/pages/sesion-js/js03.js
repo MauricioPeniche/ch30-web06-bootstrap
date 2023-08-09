@@ -235,10 +235,12 @@ if (numeroMes >= 1 && numeroMes <= 12) {
 
 */
 
-const pagoTarjetaCredito = false; 
+const pagoTarjetaCredito = true; 
 
-let msj; 
+/* let msj; 
 if ( pagoTarjetaCredito ) msj= "ha realizado el pago"
-else msj = "no ha realizado el pago";
+else msj = "no ha realizado el pago"; */
+
+const msj = pagoTarjetaCredito ? "ha realizado el pago de TC" : "no se ha realizado el pago de TC";
 
 console.log(`El usuario ${msj}`);
