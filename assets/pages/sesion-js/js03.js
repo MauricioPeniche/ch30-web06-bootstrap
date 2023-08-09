@@ -178,7 +178,7 @@ console.log(`El ventilador está en ${setVelocidadVentilador()}`);
 
 */
 
- let numMes = prompt("Ingresa el número de mes(if-else))");
+ /* let numMes = prompt("Ingresa el número de mes(if-else))");
 if (numMes >= 1 && numMes <= 12) {
     if (numMes == 12 || numMes <= 2) {
         alert("Estás en Invierno");
@@ -223,4 +223,22 @@ if (numeroMes >= 1 && numeroMes <= 12) {
     }
 } else {
     alert("Ingresa un mes válido");
-}
+} */
+
+//------------------- Operador Ternario----------------------------------
+/*
+    Es el único operador de JavaScript que tiene 3 operandos.
+    Generalmente se utiliza como opción a la sentencia if-else. 
+
+    Sintaxis: 
+        condición ? expresiónSiCondiciónEsVerdadera : expresiónSiCondiciónEsFalsa;
+
+*/
+
+const pagoTarjetaCredito = false; 
+
+let msj; 
+if ( pagoTarjetaCredito ) msj= "ha realizado el pago"
+else msj = "no ha realizado el pago";
+
+console.log(`El usuario ${msj}`);
