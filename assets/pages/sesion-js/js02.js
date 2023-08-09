@@ -338,4 +338,15 @@ function saludos(numeroSaludo) {
   saludos(numeroSaludo - 1);
 }
 
-saludos(10);
+/*
+        //    REFACTORIZADO
+function saludoRecursivo( numeroSaludo ) {
+    if(numeroSaludo > 1){
+        saludoRecursivo( numeroSaludo - 1)     
+    }    
+        console.log(`Saludo ${numeroSaludo}`);    
+}
+*/
+
+console.log("****** Saludo Ascendente ******");
+saludoRecursivo(10);
