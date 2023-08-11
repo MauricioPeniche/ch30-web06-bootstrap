@@ -90,3 +90,35 @@ let x = 3;
 let y = ++x; 
 console.log(`x : ${ x++ } y: ${ ++y }`); // 4, 5
 console.log(`x : ${ x } y: ${ y }`); // 5, 5
+
+// ------------ Operadores logicos && y || -----------
+/* 
+    Tambien son conocidos como operadores de corto circuito ( short circuit operators ).
+
+    && : La evaluacion se detiene tan pront como se encuentra un operador falso.
+        Ya no se evalua el segundo operando y se retorna la expresion de OP1. 
+    OP1 && OP2 Si OP1 es verdadero, se realiza la expresion de OP2. 
+
+    || : Si OP1 es verdadero se realiza la expresion de OP1, NO se realiza la expresion de OP2. 
+
+*/
+
+const va = true; vb = false, vc = true;  // const va, const vb, const vc
+const n1 = n2 = n3 = true;  // const n1, var n2, var n3
+
+console.log( va || vb && vc); // true 
+
+// Conversión a booleano
+// En la conversión de boolean los siguientes valores son false:
+// "", 0, null, undefined
+
+console.log( va && "Holi Crayoli" ); // "Holi Crayoli"
+console.log( vb && "Holi Crayoli" ); // false
+console.log( NaN && "Holi Crayoli" ); // NaN
+console.log( "false" && "Holi Crayoli" ); // "Holi Crayoli"
+console.log( "" && "Activado" ); // ""
+console.log( "Activado" && "" ); // ""
+console.log( "Mau" && "Activado" ); // "Activado"
+
+console.log( "Activado" || "" ) // "Activado"
+console.log( "Activado" || papasFritas ); // "Activado"
