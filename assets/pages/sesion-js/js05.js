@@ -85,3 +85,8 @@ for ( ; a < 3; b = a++) {
     console.log( a, b);
 }
 console.log(a, b); // 3 - 2 
+
+let x = 3; 
+let y = ++x; 
+console.log(`x : ${ x++ } y: ${ ++y }`); // 4, 5
+console.log(`x : ${ x } y: ${ y }`); // 5, 5
