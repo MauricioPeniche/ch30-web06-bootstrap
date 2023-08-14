@@ -121,4 +121,56 @@ console.log( "Activado" && "" ); // ""
 console.log( "Mau" && "Activado" ); // "Activado"
 
 console.log( "Activado" || "" ) // "Activado"
-console.log( "Activado" || papasFritas ); // "Activado"
+console.log( "Activado" || varSinDeclarar ); // "Activado"
+
+const person = {
+    name : "Leo",
+    lastname : "Ronaldo",
+    age : 25,
+    //occupation : "Full-Stack developer",
+  };
+  
+  console.log(`nombre: ${ person.name }`);
+  console.log(`nombre: ${ person["name"] }`);
+  
+  /* if ( person.occupation === undefined || person.occupation === "" ){
+    person.occupation = "Software Enginner";
+  } */
+  // const occupation = person.occupation     ; // Software Enginner 
+  
+  // const occupation = person.occupation === undefined ? "Software Enginner" : person.occupation; // Software Enginner 
+  
+  const occupation = person.occupation ||  "Software Enginner"; // Software Enginner 
+  // const occupation = person.occupation ??  "Software Enginner"; // operador nullish Coalescing
+  
+  console.log(`Ocupación: ${ occupation }`); // Software Enginner
+
+  //-------------------- Comparacion Estricta -----------------------
+  /* 
+    === Estrictamente igual, se debe comparar el valor y el tipo de dato
+    !== Estrictamente diferente, debe ser diferente en valor y tipo
+  
+  */
+
+    console.log( "23" === 23 ); // false
+    console.log( "true" === true ); // false
+    console.log( "true" == true ); // false NaN == 1
+    console.log ( "45" !== 45 ); // true
+
+// --------------------Operador de desestructuracion---------------------
+/* 
+  Es una expresion en JS que hace posible extraer datos de arreglos u objetos y nos ayuda a realizar asignaciones mas complejas.
+
+*/
+
+let dataA = 10; 
+let dataB = 20; 
+console.log(`a: ${dataA}, b: ${dataB}` );
+// Intercambiar los datos -> A: 20 y B: 10 
+/* let temp = dataA; 
+dataA = dataB; 
+dataB = temp;  */
+
+[ dataA, dataB ] = [ dataB, dataA ]; 
+
+console.log(`a: ${dataA}, b: ${dataB}`); // 10, 20
