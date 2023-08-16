@@ -35,7 +35,7 @@ const pinkyPromise = new Promise ( ( fncCallbackResolve, fncCallbackReject )=> {
 // Se usa los metodos the, catch y finally*
 
 console.log("--------> Promesas <----------");
-console.log("Antes de consumir la promesa");
+console.log("01 - Antes de consumir la promesa");
 
 // pinkyPromise(); // pinkyPromise is not a function;
 // pinkyPromise.then().catch().finally();
@@ -46,11 +46,11 @@ console.log("Antes de consumir la promesa");
     .finally( ()=> ); // Se ejecuta una funcion de callback despues de que la promesa fue resuelta o rechazada. 
  */
 
-    
+
 pinkyPromise
     .then( ( response )=> console.log(`Promesa Resuelta ${response}`) ) 
-    .catch( ( error )=> console.log(`Promesa Rechazada ${error}`) ) 
+    .catch( ( error )=> console.log(`Promesa Rechazada ${error.message}`) ) 
     .finally( ()=> console.log("Se ha terminado de procesar la promesa")); 
 
     
-console.log("Despues de consumir la promesa");
+console.log("03 - Despues de consumir la promesa");
