@@ -29,4 +29,11 @@ const postUser = async ( userData) =>{
     const response = await responseJSON.json(); // convertir de JSON a Object JS
     console.log(response);
     response.id && alert( `${response.id}: ${response.token} ` );
+
+    // Iterar sobre un objeto
+    for ( const key in response ) {
+        console.log(`clave: ${key}, value: ${ response[key] }`)
+
+    }
+
 }
