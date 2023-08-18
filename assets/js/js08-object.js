@@ -33,7 +33,7 @@ const postUser = async ( userData) =>{
     // Iterar sobre un objeto
     for ( const key in response ) {
         console.log(`clave: ${key}, value: ${ response[key] }`)
-
     }
+ }
 
-}
+ 
